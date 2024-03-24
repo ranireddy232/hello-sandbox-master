@@ -2,9 +2,9 @@ package Consumer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.Date;
 
 @ApplicationScoped
