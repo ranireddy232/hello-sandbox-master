@@ -34,6 +34,7 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-container-image-s2i</artifactId>
+      <version>2.6.3.Final</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
