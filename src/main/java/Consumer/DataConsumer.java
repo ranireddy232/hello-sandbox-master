@@ -18,7 +18,6 @@ public class DataConsumer {
     @Incoming("data-input")
     @Outgoing("final-output")
     public String receive(String message) throws JsonProcessingException {
-        System.out.println(" Inside the Consumer");
         //logger.info("Got a msg: " + message);
         if (message.indexOf("-") != -1) {
             /*Skipping the last string after '-' to get the second to last string */

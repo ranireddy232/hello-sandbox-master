@@ -1,29 +1,32 @@
 package Consumer;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 
 public class DataOutput {
-    private Date date;
-    private String outputMessage;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+    private Date timestamp;
 
-    public DataOutput(String message, Date date) {
-        this.outputMessage = message;
-        this.date = date;
+    private String message;
+
+    public DataOutput(String message, Date timestamp) {
+        this.message = message;
+        this.timestamp = timestamp;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getTimestamp() {
+        return timestamp;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 
-    public String getOutputMessage() {
-        return outputMessage;
+    public String getMessage() {
+        return message;
     }
 
-    public void setOutputMessage(String outputMessage) {
-        this.outputMessage = outputMessage;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
