@@ -21,7 +21,6 @@ public class DataResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response send(String message){
         producer.sendKafkaData(message);
-        System.out.println("message = " + message);
         return Response.accepted().build();
     }
 }
